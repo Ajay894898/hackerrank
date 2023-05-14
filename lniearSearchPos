@@ -1,0 +1,43 @@
+#include <stdio.h>
+#include <string.h>
+#include <math.h>
+#include <stdlib.h>
+
+int main() {
+
+    /* Enter your code here. Read input from STDIN. Print output to STDOUT */    
+  
+
+    int n, k, i, pos = -1;
+  
+   
+    scanf("%d", &n);
+    
+    int arr[n];
+    
+  
+    for (i = 0; i < n; i++) {
+        scanf("%d", &arr[i]);
+    }
+    
+   
+    scanf("%d", &k);
+    
+    // Find the position of number k
+    for (i = 0; i < n; i++) {
+        if (arr[i] == k) {
+            pos = i;
+            break;
+        }
+    }
+    
+    if (pos != -1) {
+        printf("%d", pos);
+    } else {
+        printf("%d", -1);
+    }
+    
+ 
+
+    return 0;
+}
